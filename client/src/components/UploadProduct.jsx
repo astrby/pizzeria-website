@@ -21,7 +21,7 @@ const UploadProduct = () => {
             const storageRef = ref(storage, `products/${productName}`);
             uploadBytes(storageRef, productImage).then((image)=>{
                 getDownloadURL(image.ref).then(async(urlImage)=>{
-                    await axios.post('http://localhost:3001/uploadProduct',{productName, productDescription, productCategory, urlImage});
+                    await axios.post('https://pizzeria-website-nzm4.vercel.app/uploadProduct',{productName, productDescription, productCategory, urlImage});
                 })
             })
             

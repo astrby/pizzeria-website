@@ -16,7 +16,7 @@ const Main = () =>{
     const[category, setCategory] = useState('');
 
     const getProducts = async() =>{
-        const peticion = await axios.get('http://localhost:3001/getProducts');
+        const peticion = await axios.get('https://pizzeria-website-nzm4.vercel.app/getProducts');
         setProducts(peticion.data);
     }
 
