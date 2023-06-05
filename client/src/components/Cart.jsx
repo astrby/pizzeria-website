@@ -18,7 +18,7 @@ const CartPage = () => {
   const[cartList, setCartList] = useState([]);
   const[totalPrice, setTotalPrice] = useState(0);
   const navigate = useNavigate();
-  const pk = proces.env.REACT_APP_STRIPEPUBLICKEY;
+  const[pk] = useState(process.env.REACT_APP_STRIPEPUBLICKEY)
 
   const actionDeleteProduct = (productName) =>{
     var updatedCartList = [];
