@@ -17,14 +17,8 @@ const CartPage = () => {
   const clearCart = localCart(state=>state.clearCart)
   const[cartList, setCartList] = useState([]);
   const[totalPrice, setTotalPrice] = useState(0);
-  const[pk,setPk]=useState('')
   const navigate = useNavigate();
-
-  const getPK = async()=>{
-    const response = await axios.get('https://pizzeria-website-ten.vercel.app/getPK');
-    console.log(response.data)
-    setPk(response.data)
-  }
+  const pk = proces.env.REACT_APP_STRIPEPUBLICKEY;
 
   const actionDeleteProduct = (productName) =>{
     var updatedCartList = [];
@@ -74,7 +68,6 @@ const CartPage = () => {
 
   useEffect(()=>{
     setCartList(cart);
-    getPK();
   },[])
 
   useEffect(()=>{
