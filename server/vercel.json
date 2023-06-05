@@ -7,9 +7,15 @@
     ],
     "routes": [
         {
-        "src": "/(.*)",
+        "src": "/redirect",
         "status": 308,
-        "headers": { "Location": "/" }
-        }
+        "headers": { "Location": "https://example.com/" }
+        },
+        {
+        "src": "/custom-page",
+        "headers": { "cache-control": "s-maxage=1000" },
+        "dest": "/index.html"
+        },
+        { "src": "/(.*)", "dest": "/" }
     ]
   }
