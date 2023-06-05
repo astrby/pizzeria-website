@@ -7,9 +7,9 @@
     ],
     "routes": [
         {
-        "src": "/redirect",
+        "src": "/",
         "status": 308,
-        "headers": { "Location": "https://example.com/" }
+        "headers": { "Location": "https://pizzeria-website-nzm4.vercel.app/" }
         },
         {
         "src": "/custom-page",
