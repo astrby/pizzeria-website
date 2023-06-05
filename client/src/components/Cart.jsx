@@ -22,6 +22,7 @@ const CartPage = () => {
 
   const getPK = async()=>{
     const response = await axios.get('https://pizzeria-website-ten.vercel.app/getPK');
+    console.log(response.data)
     setPk(response.data)
   }
 
