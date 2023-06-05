@@ -17,7 +17,7 @@ const Product = () =>{
     const addToCart = localCart(state=>state.addToCart);
 
     const getProduct = async(productId)=>{
-        const peticion = await axios.post('https://pizzeria-website-nzm4.vercel.app/getProduct',{productId});
+        const peticion = await axios.post('https://pizzeria-website-ten.vercel.app/getProduct',{productId});
         setProduct(peticion.data)
     }
 

@@ -21,7 +21,7 @@ const CartPage = () => {
   const navigate = useNavigate();
 
   const getPK = async()=>{
-    const response = await axios.get('https://pizzeria-website-nzm4.vercel.app/getPK');
+    const response = await axios.get('https://pizzeria-website-ten.vercel.app/getPK');
     setPk(response.data)
   }
 
@@ -49,7 +49,7 @@ const CartPage = () => {
 
   const pay = async token =>{
     const location = document.getElementById('location');
-    const response = await axios.post('https://pizzeria-website-nzm4.vercel.app/payment',{
+    const response = await axios.post('https://pizzeria-website-ten.vercel.app/payment',{
       amount: Number(totalPrice+'00'),
       token
     });
